@@ -6,3 +6,26 @@
     habitaciones triples, suites.
     Probar si es un documento bien formado.
 -->
+<!DOCTYPE registro [
+    <!ELEMENT registro (nombre,telefono,direccion,ciudad,pais,estrellas,descripcion,habitaciones)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+   
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT estrellas (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT habitaciones (individuales,dobles,triples,suits)>
+]>
+
+<registro>
+<nombre>Pedro</nombre>
+<telefono>600202020</telefono>
+<direccion>calle wallaby 42</direccion>
+<ciudad>Sidney</ciudad>
+<pais>Australia</pais>
+<estrellas></estrellas>
+<descripcion>Hotel para toda la familia</descripcion>
+<habitaciones></habitaciones>
+</registro>
