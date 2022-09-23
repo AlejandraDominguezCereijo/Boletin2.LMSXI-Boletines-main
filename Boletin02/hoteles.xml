@@ -7,25 +7,37 @@
     Probar si es un documento bien formado.
 -->
 <!DOCTYPE registro [
-    <!ELEMENT registro (nombre,telefono,direccion,ciudad,pais,estrellas,descripcion,habitaciones)>
+
+    <!ELEMENT registro (nombre,telefono,direccion,ciudad,pais,estrellas,descripcion,habitaciones_individuales,habitaciones_dobles,habitaciones_triples,suits)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT telefono (#PCDATA)>
-    <!ELEMENT direccion (#PCDATA)>
-   
+    <!ELEMENT direccion (calle,numero)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
     <!ELEMENT ciudad (#PCDATA)>
     <!ELEMENT pais (#PCDATA)>
     <!ELEMENT estrellas (#PCDATA)>
     <!ELEMENT descripcion (#PCDATA)>
-    <!ELEMENT habitaciones (individuales,dobles,triples,suits)>
+    <!ELEMENT habitaciones_individuales (#PCDATA)>
+    <!ELEMENT habitaciones_dobles (#PCDATA)>
+    <!ELEMENT habitaciones_triples (#PCDATA)>
+    <!ELEMENT suits (#PCDATA)>
+
 ]>
 
 <registro>
 <nombre>Pedro</nombre>
 <telefono>600202020</telefono>
-<direccion>calle wallaby 42</direccion>
+<direccion>
+    <calle>wallaby</calle>
+    <numero>42</numero>
+</direccion>
 <ciudad>Sidney</ciudad>
 <pais>Australia</pais>
-<estrellas></estrellas>
+<estrellas ></estrellas>
 <descripcion>Hotel para toda la familia</descripcion>
-<habitaciones></habitaciones>
+<habitaciones_individuales></habitaciones_individuales>
+<habitaciones_dobles></habitaciones_dobles>
+<habitaciones_triples></habitaciones_triples>
+<suits></suits>
 </registro>
